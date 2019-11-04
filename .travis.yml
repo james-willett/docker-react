@@ -4,3 +4,6 @@ services:
 
 before_install:
   - docker build -t snakee580/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true snakee580/docker-react npm run test
